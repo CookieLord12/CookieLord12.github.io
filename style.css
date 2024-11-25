@@ -1,19 +1,38 @@
-/* Basic styling for layout */
+/* Define CSS Variables for Light and Dark Themes */
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --nav-bg-color: #f4f4f4;
+    --nav-text-color: #333333;
+}
+
+.dark-theme {
+    --bg-color: #1e1e1e;
+    --text-color: #ffffff;
+    --nav-bg-color: #2c2c2c;
+    --nav-text-color: #ffffff;
+}
+
+/* Apply Variables */
 body {
-    display: flex;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     margin: 0;
     font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Left navigation bar styling */
 .nav-bar {
     width: 25%;
-    background-color: #f4f4f4;
+    background-color: var(--nav-bg-color);
+    color: var(--nav-text-color);
     padding: 20px;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     height: 100%;
     overflow-y: auto;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .nav-bar ul {
@@ -27,8 +46,9 @@ body {
 
 .nav-bar ul li a {
     text-decoration: none;
-    color: #333;
+    color: var(--nav-text-color);
     font-size: 18px;
+    transition: color 0.3s;
 }
 
 .nav-bar ul li a:hover {
@@ -52,4 +72,23 @@ h1 {
 
 p, img {
     margin-bottom: 20px;
+}
+
+/* Button Styling */
+button#theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button#theme-toggle:hover {
+    opacity: 0.8;
 }
