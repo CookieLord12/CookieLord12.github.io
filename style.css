@@ -10,7 +10,7 @@
     --bg-color: #1e1e1e;
     --text-color: #ffffff;
     --nav-bg-color: #2c2c2c;
-    --nav-text-color: #ffffff;
+    --nav-text-color: #ffffffc0;
 }
 
 /* Apply Variables */
@@ -59,7 +59,7 @@ body {
 .content {
     margin-left: 25%;
     padding: 100px;
-    width: 75%;
+    width: 60%;
 }
 
 section {
@@ -67,7 +67,7 @@ section {
 }
 
 h1 {
-    color: #444;
+    color: var(--nav-text-color);
 }
 
 p, img {
