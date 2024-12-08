@@ -24,7 +24,7 @@ body {
 
 /* Left navigation bar styling */
 .nav-bar {
-    width: 25%;
+    width: 11%;
     background-color: var(--nav-bg-color);
     color: var(--nav-text-color);
     padding: 20px;
@@ -33,6 +33,7 @@ body {
     height: 100%;
     overflow-y: auto;
     transition: background-color 0.3s, color 0.3s;
+    z-index: 9;
 }
 
 .nav-bar ul {
@@ -53,6 +54,11 @@ body {
 
 .nav-bar ul li a:hover {
     color: #007BFF;
+}
+
+.nav-bar img {
+    border: none;
+    border-radius: 50%;
 }
 
 /* Right content area styling */
@@ -77,20 +83,43 @@ p, img {
 /* Button Styling */
 button#theme-toggle {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
+    bottom: 10px;
+    left: 10px;
+    padding: 6px 10px;
     background-color: var(--text-color);
     color: var(--bg-color);
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 12px;
     transition: background-color 0.3s, color 0.3s;
+    z-index: 10;
 }
 
 button#theme-toggle:hover {
     opacity: 0.8;
+}
+
+/* Scroll-to-Top Button Styling */
+#scroll-to-top {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #7a7a7a;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 12px;
+    display: none;
+    cursor: pointer;
+    transition: opacity 0.3s;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+}
+
+#scroll-to-top:hover {
+    background-color: #0056b3;
 }
 
 /* Footer Styling */
@@ -102,6 +131,7 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+    z-index: 8;
 }
 
 footer .footer-content {
