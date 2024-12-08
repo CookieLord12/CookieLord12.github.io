@@ -16,3 +16,22 @@ themeToggleButton.addEventListener("click", () => {
         themeToggleButton.textContent = "Tamsus režimas";
     }
 });
+
+// Get the button element
+const scrollToTopButton = document.getElementById("scroll-to-top");
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollToTopButton.style.display = "block"; // Show the button
+    } else {
+        scrollToTopButton.style.display = "none"; // Hide the button
+    }
+};
+
+// Scroll to the top of the page when the button is clicked
+scrollToTopButton.addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+});
